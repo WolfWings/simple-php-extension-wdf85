@@ -31,7 +31,7 @@ coverage: $(SOURCE)
 	$(CC) $(CFLAGS) -fprofile-instr-generate -fcoverage-mapping $(INCDIRS) $(LDFLAGS) -o coverage.so $^
 	php -dextension=./coverage.so ./coverage.php
 	llvm-profdata-11 merge -sparse default.profraw -o default.profdata
-	llvm-cov-11 show ./coverage.so -instr-profile=default.profdata --ignore-filename-regex=php
+	llvm-cov-11 show ./coverage.so -instr-profile=default.profdata --ignore-filename-regex=\\.h\$
 	$(RM) coverage.so default.profraw default.profdata
 	@:
 
