@@ -168,7 +168,7 @@ PHP_FUNCTION( wdf85_decode ) {
 	RETVAL_STR( output );
 }
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX( arginfo_string_from_single_string, 0, 0, IS_STRING, 1 )
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX( arginfo_string_from_single_string, 0, 1, IS_STRING, 1 )
 	ZEND_ARG_TYPE_INFO( 0, string, IS_STRING, 0 )
 ZEND_END_ARG_INFO()
 
